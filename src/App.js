@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import './App.css';
+import { FaCode, FaCloud, FaChartBar } from 'react-icons/fa';
 
 const App = () => {
   const [message, setMessage] = useState("");
@@ -110,40 +111,57 @@ const App = () => {
 
       {/* Services Section */}
       <section id="services" className="section services">
-        <h2 className="section-title">Our Expertise</h2>
-        <div className="services-list">
-          <div className="service-card">
-            <img src="/icons/web-dev.png" alt="Web Development" className="service-icon" />
-            <h3 className="service-title">Web Development</h3>
-            <p className="service-text">We create scalable, responsive, and user-friendly websites tailored to your needs.</p>
-          </div>
-          <div className="service-card">
-            <img src="/icons/cloud.png" alt="Cloud Solutions" className="service-icon" />
-            <h3 className="service-title">Cloud Solutions</h3>
-            <p className="service-text">Our cloud experts enable seamless migrations, cost optimization, and security in the cloud.</p>
-          </div>
-          <div className="service-card">
-            <img src="/icons/data.png" alt="Data Analytics" className="service-icon" />
-            <h3 className="service-title">Data Analytics</h3>
-            <p className="service-text">Turn data into actionable insights with our advanced analytics services.</p>
-          </div>
+      <h2 className="section-title">Our Expertise</h2>
+      <div className="services-list">
+        <div className="service-card">
+          <FaCode className="service-icon" size={50} color="#4A90E2" />
+          <h3 className="service-title">Web Development</h3>
+          <p className="service-text">
+            We create scalable, responsive, and user-friendly websites tailored to your needs.
+          </p>
         </div>
-      </section>
+        <div className="service-card">
+          <FaCloud className="service-icon" size={50} color="#50C878" />
+          <h3 className="service-title">Cloud Solutions</h3>
+          <p className="service-text">
+            Our cloud experts enable seamless migrations, cost optimization, and security in the cloud.
+          </p>
+        </div>
+        <div className="service-card">
+          <FaChartBar className="service-icon" size={50} color="#FF6347" />
+          <h3 className="service-title">Data Analytics</h3>
+          <p className="service-text">
+            Turn data into actionable insights with our advanced analytics services.
+          </p>
+        </div>
+      </div>
+    </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="section portfolio">
-        <h2 className="section-title">Our Work</h2>
-        <p className="section-text">Take a look at some of the projects we've delivered for our clients.</p>
-        <div className="gallery-grid">
-          {[1, 2, 3, 4].map((item) => (
-            <div key={item} className="gallery-item">
-              <img
-                src={`https://source.unsplash.com/random/400x300?sig=${item}&technology`}
-                alt={`Portfolio ${item}`}
-                className="gallery-image"
-              />
-            </div>
-          ))}
+      {/* Testimonials Section */}
+      <section id="testimonials" className="section testimonials">
+        <h2 className="section-title">What Our Clients Say</h2>
+        <p className="section-text">
+          Hear directly from our clients about how we've helped them achieve their goals and drive business growth.
+        </p>
+        <div className="testimonials-container">
+          <div className="testimonial-card">
+            <p className="testimonial-text">
+              "Hybrowlabs Technologies transformed our digital platform. Their expertise in web development and cloud solutions allowed us to scale efficiently and securely."
+            </p>
+            <p className="testimonial-author">- Sarah Johnson, CEO of TechInnovate</p>
+          </div>
+          <div className="testimonial-card">
+            <p className="testimonial-text">
+              "Their data analytics service provided actionable insights that helped us refine our strategies and achieve remarkable results in a short time."
+            </p>
+            <p className="testimonial-author">- Michael Lee, Chief Data Officer at DataCorp</p>
+          </div>
+          <div className="testimonial-card">
+            <p className="testimonial-text">
+              "The Hybrowlabs team was a true partner in our cloud migration journey. Their attention to detail and professional approach made the transition smooth."
+            </p>
+            <p className="testimonial-author">- Jennifer Parker, IT Director at CloudNet Solutions</p>
+          </div>
         </div>
       </section>
 
